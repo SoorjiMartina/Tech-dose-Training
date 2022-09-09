@@ -41,6 +41,6 @@ int main(void) {
     maxval=arr[i];
   }
   }
-  printf("%d %d\n",maxval,maxcount);
+  printf("Mode is :%d and count is:%d\n",maxval,maxcount);
   return 0;
 }

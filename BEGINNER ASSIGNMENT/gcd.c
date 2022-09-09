@@ -2,7 +2,7 @@
 #define ULL unsigned long long int
 ULL gcd(ULL a,ULL b)
 {
-  return b==0 ? a : gcd(b%a,b);
+  return (a==0) ? b : gcd(b%a,a);
 }
 int main(void) {
  ULL a,b;

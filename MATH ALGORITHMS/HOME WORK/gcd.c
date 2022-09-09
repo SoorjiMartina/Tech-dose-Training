@@ -1,12 +1,12 @@
 #include <stdio.h>
-int gcd (int a,int b)
+#define ULL unsigned long long int
+ULL gcd(ULL a,ULL b)
 {
-  return a==0 ? b : gcd(b%a,a);
+  return (a==0) ? b : gcd(b%a,a);
 }
-
 int main(void) {
-  int a,b;
-  scanf("%d%d",&a,&b);
-  printf("%d",gcd(a,b));
+ ULL a,b;
+  scanf("%lld%lld",&a,&b);
+  printf("%lld",gcd(b,a));
   return 0;
 }

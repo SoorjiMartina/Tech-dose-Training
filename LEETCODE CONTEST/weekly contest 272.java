@@ -4,16 +4,22 @@ class Solution {
         String str="";
         for(int i=0;i<len;i++)
         {
-            String s ="";
-            for(int j= words[i].length()-1;j>=0;j--)
-            {
-                s+=words[i].charAt(j);
-            }
-            if(words[i].equals(s))
-            {
-                str+=s;break;
-            }
+           if(ispalindrome(words[i]))
+           {
+               return words[i];
+           }
         }
         return str;
+    }
+    private boolean ispalindrome(String s)
+    {
+        for(int i=0; i<s.length();i++)
+        {
+            if(s.charAt(i)!= s.charAt(s.length()-i-1))
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }

@@ -6,20 +6,16 @@ class Solution {
             map.put(s.charAt(i),map.getOrDefault(s.charAt(i),0)+1);
         }
          PriorityQueue<Character> pq = new PriorityQueue<>((a,b)->map.get(b)-map.get(a));
-        for(Character ch : map.keySet())
-        {
-            pq.add(ch);
-        }
-        StringBuilder str = new StringBuilder();
+        pq.addAll(map.keySet());
+        String str ="";
         while(!pq.isEmpty())
         {
-            char c = pq.poll();
-            int count = map.get(c);
-            while(count-->0)
+            char ch = pq.poll();
+            for(int i=0;i<map.get(ch);i++)
             {
-                str.append(c);
+                str+=ch;
             }
         }
-        return str.toString();
+        return str;
     }
 }
